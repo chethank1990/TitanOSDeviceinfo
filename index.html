@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanOS Device Info</title>
+    <script src="https://partners.titanos.tv/static/device-info-sdk.js" type="text/javascript"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        pre {
+            text-align: left;
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TitanOS Device Information</h1>
+    <div class="container">
+        <h3>Device Info:</h3>
+        <pre id="deviceInfo">Loading...</pre>
+    </div>
+
+    <script>
+        window.onDeviceInfoReady = function(deviceInfo) {
+            document.getElementById("deviceInfo").textContent = JSON.stringify(deviceInfo, null, 2);
+        };
+    </script>
+
+</body>
+</html>
