@@ -42,8 +42,9 @@
 
     <script>
         window.onDeviceInfoReady = function(deviceInfo) {
-            document.getElementById("deviceInfo").textContent = JSON.stringify(deviceInfo, null, 2);
-        };
+        console.log("Device Info API Triggered:", deviceInfo);
+        document.getElementById("deviceInfo").textContent = JSON.stringify(deviceInfo, null, 2);
+    };
     </script>
 
 </body>
